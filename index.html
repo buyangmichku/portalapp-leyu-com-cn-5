@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼体育 – 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafbfc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2.4rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* 段落与标题间距 */
+        h1, h2, h3, p {
+            margin-bottom: 0.75rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-top: 0.8rem;
+            margin-bottom: 0.4rem;
+            color: #0f172a;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.2rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e2e8f0;
+            color: #0f172a;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1.6rem;
+            color: #1e293b;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        .intro-highlight {
+            background: #ffffff;
+            padding: 1.6rem 1.8rem;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+            margin: 2rem 0 2.4rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.4rem 0 1.8rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            border: 1px solid #edf2f7;
+            transition: all 0.15s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #bfdbfe;
+            box-shadow: 0 4px 8px rgba(59,130,246,0.06);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #0f172a;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #475569;
+        }
+
+        .badge-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0;
+        }
+
+        .badge-list li {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 0.25rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #1e293b;
+            margin: 0.3rem 0.3rem 0.3rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .inline-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #bfdbfe;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            color: #1d4ed8;
+            border-bottom-color: #2563eb;
+        }
+
+        .scenario-box {
+            background: #ffffff;
+            border: 1px solid #e9edf2;
+            padding: 1.6rem;
+            border-radius: 16px;
+            margin: 2rem 0 1.6rem 0;
+        }
+
+        .faq-item {
+            margin: 1.2rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            color: #475569;
+            font-size: 0.95rem;
+            padding-left: 0.2rem;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.6rem;
+            margin-top: 2.4rem;
+            text-align: left;
+        }
+
+        .footnote a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .footnote a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 540px) {
+            body {
+                padding: 1.6rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .intro-highlight {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>乐鱼体育</h1>
+    <div class="subhead">面向体育内容聚合与轻量交互的站点 — 产品说明</div>
+
+    <p>乐鱼体育定位为体育信息与赛事辅助工具型平台，服务于有日常体育资讯需求的用户。本页从站点结构、核心功能、适用场景与使用注意等角度进行说明，帮助新访客快速建立认知。</p>
+
+    <!-- hero 摘要卡片 -->
+    <div class="intro-highlight">
+        <p style="margin-bottom:0.4rem;"><strong>摘要</strong> · 站点围绕足球、篮球、网球等主流体育项目，提供赛事数据摘要、赛程整理、内容聚合与基础互动功能。不涉及投注、博彩或任何形式的金融交易。所有信息均来自公开可查来源，平台仅作整理与展示。</p>
+    </div>
+
+    <h2>功能亮点</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>📋 赛程与数据</h3>
+            <p>主流联赛的赛程、积分、对阵信息以结构化方式呈现，便于快速查阅与对比。</p>
+        </div>
+        <div class="feature-card">
+            <h3>📰 资讯聚合</h3>
+            <p>自动汇集来自授权媒体与联赛官方的新闻、战报与转会动态，按时间线排列。</p>
+        </div>
+        <div class="feature-card">
+            <h3>🔍 检索与筛选</h3>
+            <p>支持按联赛、球队、日期或关键词筛选内容，提高信息获取效率。</p>
+        </div>
+        <div class="feature-card">
+            <h3>📱 响应式适配</h3>
+            <p>移动端与桌面端均经过布局优化，在各类屏幕下均能保持基本的可读性与操作体验。</p>
+        </div>
+    </div>
+
+    <ul class="badge-list">
+        <li>足球五大联赛</li>
+        <li>NBA / 欧冠</li>
+        <li>网球大满贯</li>
+        <li>电竞板块</li>
+        <li>数据更新至 2025</li>
+    </ul>
+
+    <h2>使用建议</h2>
+    <p>对于日常关注体育赛事的用户，建议将站点作为辅助信息源之一。可结合官方赛事 App 或直播平台交叉验证赛程与比分。站内提供的“关注”功能可自定义球队或联赛，实现个性化信息流。</p>
+    <p>若您需要了解某一特定联赛的完整历史数据或实时赔率信息（本站不提供赔率），建议直接访问相应联赛官网或授权数据服务商。</p>
+
+    <div class="scenario-box">
+        <h3 style="margin-top:0; margin-bottom:0.6rem;">典型使用场景</h3>
+        <p>👤 <strong>工作日早晨</strong>：快速浏览前一晚的赛果与积分变化，节省翻找多个 App 的时间。<br>
+        👤 <strong>周末赛前</strong>：查看对阵与伤病信息，辅助决定观看哪场直播。<br>
+        👤 <strong>赛季末段</strong>：查阅争冠／保级形势，对比剩余赛程难度。</p>
+    </div>
+
+    <h2>关于站点可信度的说明</h2>
+    <p>乐鱼体育是一个信息展示与聚合平台，本身不生产原始赛事数据。所有数据均由程序自动抓取并整理自公开渠道（包括但不限于联赛官方 API、合作媒体推送）。平台在服务器层面部署了基本的安全措施（HTTPS、数据缓存校验），并定期人工校正数据源，但无法保证 100% 实时性与绝对准确。</p>
+    <p>请您对关键信息（如比赛时间、直播地址）进行二次确认。我们不鼓励完全依赖单一信息源进行任何决策。</p>
+
+    <h2>常见疑问 (FAQ)</h2>
+    <div class="faq-item">
+        <div class="faq-question">❓ 是否需要注册或付费？</div>
+        <div class="faq-answer">浏览赛程、新闻与基础数据无需注册。部分个性化功能（如关注列表、收藏）需创建免费账户。平台无任何付费订阅或内购项目。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">❓ 数据延迟多久？</div>
+        <div class="faq-answer">赛程与积分通常延迟不超过 15 分钟，即时比分功能因数据源接口限制，延迟约 1–3 分钟。重大赛事期间可能略有增加。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">❓ 与官方渠道的关系？</div>
+        <div class="faq-answer">本站为第三方信息聚合平台，与任何联赛、俱乐部或体育组织无直接隶属关系。所有内容均注明来源或可溯至原始出处。</div>
+    </div>
+
+    <p style="margin-top:2.2rem;">如果您希望直接探索站点本身，可以访问 <a href="https://portalapp-leyu.com.cn" class="inline-link">乐鱼体育</a>。建议使用现代浏览器（Chrome / Edge / Safari 最新版本）以获得完整体验。</p>
+
+    <div class="footnote">
+        <p>本介绍页面仅用于说明站点属性与功能范围。内容基于 2025 年 4 月版本编写，后续功能可能有所调整。如有疑问或反馈，可通过站内“意见反馈”通道联系管理员。</p>
+        <p style="margin-top:0.6rem;">© 乐鱼体育 · 仅作展示用途。</p>
+    </div>
+
+</div>
+</body>
+</html>
