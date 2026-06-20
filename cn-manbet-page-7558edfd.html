@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专题 · manbet 观察</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f4efe8;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      color: #2b2a27;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .page-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #fcf9f4;
+      padding: 3.5rem 3rem;
+      border-radius: 2px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    /* hero */
+    .hero {
+      border-left: 6px solid #b7a48c;
+      padding-left: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #4b3f33;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1rem;
+      color: #7a6c5d;
+      border-top: 1px solid #ddd6cb;
+      padding-top: 0.5rem;
+      display: inline-block;
+    }
+
+    /* 引言块 */
+    .context-block {
+      background: #ede7dd;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0 2.5rem 0;
+      border-radius: 1px;
+      font-style: italic;
+      color: #3d352b;
+      font-size: 1.08rem;
+      border-left: 3px solid #b7a48c;
+    }
+
+    .context-block strong {
+      font-style: normal;
+      font-weight: 500;
+      color: #4b3f33;
+    }
+
+    /* 文章段落 */
+    .section-text {
+      margin-bottom: 2rem;
+    }
+
+    .section-text p {
+      margin-bottom: 1.4rem;
+      font-size: 1.04rem;
+      text-align: justify;
+      word-spacing: 0.03em;
+    }
+
+    .section-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 引用式提示框 */
+    .inset-box {
+      background: #f5f0e9;
+      border: 1px solid #d9cfc2;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 2.2rem 0;
+      font-size: 0.98rem;
+      color: #4a4036;
+      border-radius: 1px;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+    }
+
+    .inset-box span.marker {
+      display: inline-block;
+      background: #b7a48c;
+      color: #fcf9f4;
+      font-size: 0.75rem;
+      font-style: normal;
+      letter-spacing: 1px;
+      padding: 0.1rem 0.8rem;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+    }
+
+    /* 特色列表（极简） */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.2rem 0 1.8rem;
+      border-top: 1px solid #e3d9ce;
+      padding-top: 2rem;
+    }
+
+    .feature-item {
+      flex: 1 1 180px;
+      background: #faf6f0;
+      padding: 1.2rem 1.2rem 1.4rem;
+      border-bottom: 1px solid #d9cfc2;
+    }
+
+    .feature-item .num {
+      font-size: 1.6rem;
+      color: #a08d78;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #4b3f33;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-item p {
+      font-size: 0.92rem;
+      color: #5f5549;
+    }
+
+    /* 页尾访问提示 */
+    .footer-visit {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d9cfc2;
+      text-align: center;
+      font-size: 1.02rem;
+      color: #5b4f41;
+    }
+
+    .footer-visit a {
+      color: #3b2f24;
+      text-decoration: none;
+      border-bottom: 1px solid #b7a48c;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .footer-visit a:hover {
+      border-bottom-color: #6b5843;
+      color: #6b5843;
+    }
+
+    .footer-visit .small-note {
+      display: block;
+      margin-top: 0.8rem;
+      font-size: 0.88rem;
+      color: #8b7d6d;
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 660px) {
+      .page-wrap {
+        padding: 2rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding-left: 1.2rem;
+      }
+      .context-block {
+        padding: 1.2rem 1.2rem;
+        margin: 1.5rem 0;
+      }
+      .feature-grid {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .inset-box {
+        padding: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page-wrap {
+        padding: 1.5rem 0.8rem;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- hero -->
+  <div class="hero">
+    <h1>manbet · 字面下的脉络</h1>
+    <div class="sub">一种符号，多重语境 &nbsp;·&nbsp; 观察笔记</div>
+  </div>
+
+  <!-- 背景说明 / 切入 -->
+  <div class="context-block">
+    <strong>从关键词出发。</strong> 每一个被反复提及的标记，都不只是随机字符的组合。背后的语义层叠、使用场景与隐含共识，往往比表面更值得梳理。<br>
+    这里尝试剥开「manbet」这个符号的上下文，不做结论，只提供一组观察的棱镜。
+  </div>
+
+  <!-- 三段自然介绍，承接 -->
+  <div class="section-text">
+    <p>
+      熟悉数字生态的人会注意到，一个简洁的标识常常承载着多重指向。以「manbet」为例，它既可以是某类平台在信息流中的缩写指代，也可以是一组品牌记忆的锚点。从构词角度看，它融合了常见的英文字段与简写习惯，简短、易记，且在不同语言使用者之间保持了较低的识别门槛。这种特性让它在跨文化传播中保留了相对稳定的面貌，不会因为音译或转写而产生太多偏移。
+    </p>
+    <p>
+      进一步观察，类似的命名方式往往出现在对简洁性有较高要求的场景中。无论是用户界面上的入口标识，还是内容聚合时的关键词标签，一个没有冗余音节的组合更容易被嵌入各式框架。更重要的是，它不附加额外的情感色彩，或者说，它的情感色彩完全由与之关联的上下文赋予。这就引出一个有趣的辩证：符号本身中性，但每次使用都会为它增添一层薄薄的含义。
+    </p>
+    <p>
+      在信息碎片化的环境中，人们倾向于通过简短的锚点来建立认知路径。「manbet」正是在这种逻辑下获得了一种功能性：它成为一扇窄门，门后的景致取决于使用者所站的方位。对一部分人而言，它指向一个熟悉的线上领域；对另一部分人，它可能只是一个待查的字符串。这种双重甚至多重存在，恰恰是现代数字标识的普遍状态。
+    </p>
+  </div>
+
+  <!-- 特点/场景 用卡片式模块 -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="num">01</div>
+      <h3>跨域简洁</h3>
+      <p>字段短小，字母构成清晰，在网址栏、文档、注释中均能高效传达，不被误解为其他常见单词。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">02</div>
+      <h3>语境依赖</h3>
+      <p>本身不携带强烈倾向，它更像一个空容器，由具体页面、服务或社群的约定俗成来填充内容。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">03</div>
+      <h3>品牌锚点</h3>
+      <p>在信息过载的界面里，一个稳定的短标识有助于快速唤起用户对特定服务或内容的记忆。</p>
+    </div>
+  </div>
+
+  <!-- 引用/提示框 类似FAQ摘要或笔记 -->
+  <div class="inset-box">
+    <span class="marker">▸ 延伸观察</span>
+    <p style="margin-bottom: 0.4rem;"><strong>常见问题一侧：</strong> 很多人会问，这样一个标识是否具有唯一性？实际上，在网络空间中，唯一性更多由域名或专属协议来保证，而单词本身可以被不同项目使用。关键在于，当用户输入或点击包含「manbet」的链接时，他们进入的是哪个具体环境。域名的绑定让模糊变得清晰。</p>
+    <p style="margin-top: 0.6rem; margin-bottom: 0;"><strong>小结：</strong> 与其纠结于符号的终极定义，不如观察它如何被使用。每一次引用都是一次意义的重塑。</p>
+  </div>
+
+  <!-- 页尾访问提示，自然嵌入链接 -->
+  <div class="footer-visit">
+    若希望了解与「manbet」相关的具体服务与内容，可前往
+    <a href="https://cn-manbet.com">manbet</a>
+    了解更多背景及功能界面。
+    <span class="small-note">本页仅作静态展示，所有信息以实际站点为准。</span>
+  </div>
+</div>
+</body>
+</html>
